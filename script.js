@@ -15,7 +15,7 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ---------- Nav scroll state ---------- */
-  const nav = $('#nav');
+  const nav = $('.nav');
   const onScroll = () => {
     if (!nav) return;
     nav.classList.toggle('is-scrolled', window.scrollY > 30);
@@ -25,7 +25,7 @@
 
   /* ---------- Mobile menu ---------- */
   const navToggle  = $('#navToggle');
-  const mobileMenu = $('#mobileMenu');
+  const mobileMenu = $('#mobile-menu-mount');
 
   const closeMobileMenu = () => {
     if (!navToggle || !mobileMenu) return;
