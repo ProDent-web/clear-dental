@@ -2,39 +2,36 @@
 
 The site is hosted on **Hostinger** and connected to the GitHub repository so updates deploy with one click.
 
-- **Repo:** https://github.com/ProDent-web/clear-dental (private)
+- **Repo:** https://github.com/ProDent-web/clear-dental (**public** — no deploy key needed)
 - **Hosting:** Hostinger
+- **Temp domain:** teal-sheep-120360.hostingersite.com (until the real domain is purchased + pointed)
 - **Branch:** `main`
+
+> **Why public?** Hostinger uses one shared SSH key per hosting account, and GitHub
+> won't let that key be a deploy key on two repos at once (it was already serving the
+> separate `cleardentalcarecentreville` repo). Making this repo public lets Hostinger
+> pull it over HTTPS with no key — and the source contains nothing that isn't already
+> visible on the live website anyway.
 
 ---
 
 ## One-time setup (do this once)
 
-### 1. Create the GitHub deploy key (Hostinger needs it for private repos)
-
-In Hostinger hPanel:
+### 1. Connect the repo in Hostinger
 
 1. Log into Hostinger → **hPanel**
-2. Open your website → **Advanced → Git**
-3. Click **Create Repository**
-4. Fill in:
-   - **Repository URL:** `git@github.com:ProDent-web/clear-dental.git` (SSH form)
+2. Open the website (`teal-sheep-120360...`) → **Advanced → GIT**
+3. In **Create a New Repository**, fill in:
+   - **Repository:** `https://github.com/ProDent-web/clear-dental.git` (HTTPS — no `git@`)
    - **Branch:** `main`
-   - **Directory:** `public_html` (or a subfolder like `public_html/cleardental` if hosting more than one site)
-5. Click **Create** — Hostinger generates an **SSH public key** and shows it. **Copy that key.**
+   - **Directory:** leave blank (defaults to `public_html`)
+4. Click **Create**
 
-### 2. Add Hostinger's key to GitHub
+No SSH key step — because the repo is public, Hostinger clones it directly.
 
-1. Open https://github.com/ProDent-web/clear-dental/settings/keys
-2. Click **Add deploy key**
-3. **Title:** `Hostinger`
-4. **Key:** paste the SSH key from Hostinger
-5. ✅ Leave **"Allow write access"** unchecked (Hostinger only needs read)
-6. Click **Add key**
+### 2. First deploy
 
-### 3. Trigger first deploy in Hostinger
-
-Back in hPanel → Git → click **Update from remote** (or **Deploy**). Hostinger pulls the repo into `public_html` and the site goes live.
+In hPanel → GIT → click **Deploy** (or **Update from remote**). Hostinger pulls the repo into `public_html` and the site goes live on the temp domain.
 
 That's it for setup.
 
