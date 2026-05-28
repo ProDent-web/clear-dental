@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" fill="none" stroke="currentColor" stroke-width="2">
+  <!-- C oval -->
+  <ellipse cx="75" cy="50" rx="40" ry="44" stroke-width="2.5"/>
+  <!-- D oval (interlocking) -->
+  <ellipse cx="125" cy="50" rx="40" ry="44" stroke-width="2.5"/>
+  <!-- CLEAR DENTAL wordmark across the middle -->
+  <text x="100" y="55" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="400" letter-spacing="3" text-anchor="middle" fill="currentColor" stroke="none">CLEAR DENTAL</text>
+</svg>

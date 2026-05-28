@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A2A22"/>
+      <stop offset="100%" stop-color="#1A100C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg4)"/>
+  <ellipse cx="800" cy="450" rx="540" ry="220" fill="#0F0805" opacity="0.9"/>
+  <text x="800" y="475" font-family="'Cormorant Garamond', serif" font-size="80" fill="#1A1208" text-anchor="middle" letter-spacing="8" opacity="0.6">— no teeth —</text>
+  <text x="800" y="800" font-family="'Cormorant Garamond', serif" font-size="28" fill="#71717A" text-anchor="middle" letter-spacing="4" opacity="0.6">BEFORE — Full reconstruction</text>
+</svg>

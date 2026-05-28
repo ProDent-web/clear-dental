@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3A2A22"/>
+      <stop offset="100%" stop-color="#1C1410"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- Lips/mouth shape -->
+  <ellipse cx="800" cy="450" rx="500" ry="200" fill="#1A0E0A" opacity="0.8"/>
+  <!-- Yellowed/crooked teeth representation -->
+  <g fill="#D4B896" opacity="0.85">
+    <rect x="540" y="380" width="50" height="90" rx="6" transform="rotate(-4 565 425)"/>
+    <rect x="600" y="375" width="55" height="100" rx="6"/>
+    <rect x="665" y="378" width="58" height="98" rx="6" transform="rotate(3 694 427)"/>
+    <rect x="733" y="375" width="55" height="100" rx="6"/>
+    <rect x="798" y="378" width="55" height="98" rx="6" transform="rotate(-2 825 427)"/>
+    <rect x="863" y="375" width="58" height="100" rx="6"/>
+    <rect x="931" y="380" width="55" height="95" rx="6" transform="rotate(4 958 427)"/>
+    <rect x="996" y="378" width="55" height="98" rx="6"/>
+    <rect x="1061" y="382" width="50" height="92" rx="6" transform="rotate(-3 1086 428)"/>
+  </g>
+  <text x="800" y="800" font-family="'Cormorant Garamond', serif" font-size="28" fill="#71717A" text-anchor="middle" letter-spacing="4" opacity="0.6">BEFORE — Replace with patient photo</text>
+</svg>

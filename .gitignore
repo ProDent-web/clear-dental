@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Source / intermediate image assets (raw HEIC + sips-converted JPGs)
+# These are huge and not needed for the live site.
+# The final hand-picked photos in assets/images/{doctor,office,cases}/ ARE committed.
+assets/images/Raw/
+assets/images/raw/
+assets/images/Processed/
+assets/images/processed/
+
+# One-off build script (not needed in deploy)
+_generate-services.py
+
+# Backup/old files
+*-OLD.*
+*.bak
+
+# Python cache (from image-processing scripts)
+__pycache__/
+*.pyc
