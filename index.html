@@ -424,12 +424,24 @@
 
         <!-- Live Google Reviews widget mounts here.
              Paste the Elfsight (or other) embed code inside #google-reviews-widget.
-             Setup instructions are in the README. -->
+             Setup instructions are in the README.
+             #reviews-fallback shows automatically if the widget is blocked
+             (e.g. iOS Safari tracking prevention) or hasn't loaded. -->
         <div class="reviews-widget reveal">
           <div id="google-reviews-widget">
             <!-- Elfsight Google Reviews | Clear Dental -->
             <script src="https://elfsightcdn.com/platform.js" async></script>
             <div class="elfsight-app-2e5f8e25-a3f2-4020-9178-6ff24786b62a" data-elfsight-app-lazy></div>
+          </div>
+
+          <!-- Fallback — hidden until JS confirms the widget didn't render -->
+          <div id="reviews-fallback" class="reviews-fallback" hidden>
+            <div class="reviews-fallback__stars" aria-hidden="true">★★★★★</div>
+            <p class="reviews-fallback__text">Our patients love their visits — read what they're saying on Google.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Clear+Dental+Centreville+VA" target="_blank" rel="noopener" class="btn btn--primary btn--large">
+              Read Reviews on Google
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
           </div>
         </div>
       </div>

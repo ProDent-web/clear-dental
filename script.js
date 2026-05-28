@@ -206,6 +206,32 @@
     });
   }
 
+  /* ---------- Google Reviews widget fallback ----------
+     If the Elfsight widget doesn't render within a few seconds
+     (blocked by iOS Safari tracking prevention, ad-blocker, network,
+     or not yet configured), reveal a fallback CTA so the section is
+     never blank. */
+  const reviewsFallback = $('#reviews-fallback');
+  const elfsightApp = $('[class*="elfsight-app-"]');
+  if (reviewsFallback) {
+    const widgetRendered = () => {
+      if (!elfsightApp) return false;
+      // Elfsight injects an iframe/markup and the box gains real height
+      return elfsightApp.children.length > 0 || elfsightApp.offsetHeight > 60;
+    };
+    let checks = 0;
+    const poll = setInterval(() => {
+      checks++;
+      if (widgetRendered()) {
+        reviewsFallback.hidden = true;
+        clearInterval(poll);
+      } else if (checks >= 8) {            // ~4s (8 × 500ms)
+        reviewsFallback.hidden = false;     // give up — show fallback
+        clearInterval(poll);
+      }
+    }, 500);
+  }
+
   /* ---------- FAQ accordion ---------- */
   $$('.faq__item').forEach(item => {
     const btn = item.querySelector('.faq__btn');
