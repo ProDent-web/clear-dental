@@ -42,6 +42,7 @@
                 <h4 class="nav__megamenu-heading">Restorative</h4>
                 <a href="${P('services/restorative-dentistry.html')}">Restorative Dentistry</a>
                 <a href="${P('services/dental-implants.html')}">Dental Implants</a>
+                <a href="${P('services/all-on-four-hybrids.html')}">All-on-4 &amp; Hybrids</a>
                 <a href="${P('services/crowns-bridges.html')}">Crowns &amp; Bridges</a>
                 <a href="${P('services/endodontics.html')}">Endodontics</a>
               </div>
@@ -116,6 +117,7 @@
         <a href="${P('services/cosmetic-dentistry.html')}">Cosmetic Dentistry</a>
         <a href="${P('services/restorative-dentistry.html')}">Restorative Dentistry</a>
         <a href="${P('services/dental-implants.html')}">Dental Implants</a>
+        <a href="${P('services/all-on-four-hybrids.html')}">All-on-4 &amp; Hybrids</a>
         <a href="${P('services/invisalign.html')}">Invisalign</a>
         <a href="${P('services/family-dentistry.html')}">Family &amp; Pediatric</a>
         <a href="${P('services/emergency-dentistry.html')}">Emergency Care</a>

@@ -17,6 +17,7 @@ assets/images/Raw/
 assets/images/raw/
 assets/images/Processed/
 assets/images/processed/
+assets/images/New All on four and hybrids/
 
 # One-off build script (not needed in deploy)
 _generate-services.py
