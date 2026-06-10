@@ -108,7 +108,7 @@
         <div class="footer__contact-line">
           <a href="tel:+17038885005">703-888-5005</a>
           <span>·</span>
-          <a href="mailto:hello@cleardental.com">hello@cleardental.com</a>
+          <a href="mailto:cleardentalnova@gmail.com">cleardentalnova@gmail.com</a>
         </div>
       </div>
 
