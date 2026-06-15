@@ -210,12 +210,8 @@
         const data = await res.json().catch(() => ({}));
 
         if (res.ok && String(data.success) === 'true') {
-          restore('Thank you — we\'ll be in touch', true);
-          form.reset();
-          setTimeout(() => {
-            btn.disabled = false;
-            restore(original, false);
-          }, 4000);
+          // Send the visitor to the dedicated thank-you page
+          window.location.href = 'thank-you.html';
         } else {
           throw new Error(data.message || 'Submission failed');
         }

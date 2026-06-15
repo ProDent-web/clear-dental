@@ -141,6 +141,9 @@
           <!-- FormSubmit settings -->
           <input type="hidden" name="_subject" value="New appointment request — Clear Dental" />
           <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Redirect target if the form posts natively (JS disabled) -->
+          <input type="hidden" name="_next" value="https://www.cleardentalnova.com/thank-you.html" />
           <!-- honeypot: hidden from people, filled by bots → submission rejected -->
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
 
