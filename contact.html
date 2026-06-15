@@ -95,22 +95,22 @@
           </div>
         </div>
 
-        <form class="visit__form reveal" id="contactForm" novalidate>
+        <form class="visit__form reveal" id="contactForm" action="https://formsubmit.co/marketing@prodentadvisors.com" method="POST">
           <h3 class="visit__form-title">Request an appointment</h3>
           <p class="visit__form-sub">We'll respond within one business day.</p>
 
           <div class="field">
-            <label for="name">Full name</label>
+            <label for="name">Full name <span class="field__req" aria-hidden="true">*</span></label>
             <input type="text" id="name" name="name" required autocomplete="name" />
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
+              <input type="email" id="email" name="email" autocomplete="email" />
             </div>
             <div class="field">
-              <label for="phone">Phone</label>
+              <label for="phone">Phone <span class="field__req" aria-hidden="true">*</span></label>
               <input type="tel" id="phone" name="phone" required autocomplete="tel" />
             </div>
           </div>
@@ -137,6 +137,12 @@
             <label for="message">Message (optional)</label>
             <textarea id="message" name="message" rows="3"></textarea>
           </div>
+
+          <!-- FormSubmit settings -->
+          <input type="hidden" name="_subject" value="New appointment request — Clear Dental" />
+          <input type="hidden" name="_template" value="table" />
+          <!-- honeypot: hidden from people, filled by bots → submission rejected -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" />
 
           <button type="submit" class="btn btn--primary btn--large btn--full">
             Send Request

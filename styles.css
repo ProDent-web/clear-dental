@@ -1694,6 +1694,17 @@ body:not([data-page="home"]) .nav.is-scrolled {
   font-weight: 500;
 }
 
+.field__req {
+  color: var(--gold);
+  margin-left: 0.15em;
+}
+
+/* Native validation styling — red-ish border on invalid fields after submit */
+.field input:user-invalid,
+.field input:user-invalid:focus {
+  border-color: #E5736B;
+}
+
 .field input,
 .field select,
 .field textarea {

@@ -177,32 +177,53 @@
     });
   }
 
-  /* ---------- Contact form ---------- */
+  /* ---------- Contact form ----------
+     Posts to FormSubmit (https://formsubmit.co), which emails each
+     submission to the practice. Native validation runs first (the form
+     no longer has novalidate), so required fields are enforced by the
+     browser before this handler fires. */
   const form = $('#contactForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    const AJAX_ENDPOINT = 'https://formsubmit.co/ajax/marketing@prodentadvisors.com';
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
       if (!btn) return;
 
       const original = btn.innerHTML;
+      const restore = (label, ok) => {
+        btn.innerHTML = label;
+        btn.style.background = ok ? 'var(--accent)' : '';
+        btn.style.color = ok ? 'var(--text)' : '';
+      };
+
       btn.disabled = true;
       btn.innerHTML = 'Sending…';
 
-      // Simulated submission — wire to real endpoint or service like Formspree
-      setTimeout(() => {
-        btn.innerHTML = 'Thank you — we\'ll be in touch';
-        btn.style.background = 'var(--accent)';
-        btn.style.color = 'var(--text)';
+      try {
+        const res = await fetch(AJAX_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form),
+        });
+        const data = await res.json().catch(() => ({}));
 
-        setTimeout(() => {
+        if (res.ok && String(data.success) === 'true') {
+          restore('Thank you — we\'ll be in touch', true);
           form.reset();
-          btn.disabled = false;
-          btn.innerHTML = original;
-          btn.style.background = '';
-          btn.style.color = '';
-        }, 3200);
-      }, 800);
+          setTimeout(() => {
+            btn.disabled = false;
+            restore(original, false);
+          }, 4000);
+        } else {
+          throw new Error(data.message || 'Submission failed');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        restore('Couldn\'t send — please call 703-888-5005', false);
+        setTimeout(() => restore(original, false), 5000);
+      }
     });
   }
 
