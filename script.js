@@ -184,7 +184,7 @@
      browser before this handler fires. */
   const form = $('#contactForm');
   if (form) {
-    const AJAX_ENDPOINT = 'https://formsubmit.co/ajax/marketing@prodentadvisors.com';
+    const AJAX_ENDPOINT = 'https://formsubmit.co/ajax/info@cleardentalnova.com';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
