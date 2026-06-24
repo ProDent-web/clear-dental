@@ -6,10 +6,12 @@
 (() => {
   'use strict';
 
-  // Determine path prefix based on page depth (e.g. "services/cosmetic-dentistry.html" needs "../")
+  // Determine path prefix based on how many folders deep the page is.
+  //   "/" or "/about.html"            → depth 0 → prefix ""
+  //   "/services/dental-implants.html" → depth 1 → prefix "../"
   const path = window.location.pathname;
-  const depth = (path.match(/\//g) || []).length - 1;
-  const prefix = depth > 1 ? '../'.repeat(depth - 1) : '';
+  const depth = Math.max(0, (path.match(/\//g) || []).length - 1);
+  const prefix = '../'.repeat(depth);
 
   const P = (href) => prefix + href;
 
