@@ -141,7 +141,8 @@
         <div class="footer__hours">
           <div><span>Mon — Thu</span><span>8a – 6p</span></div>
           <div><span>Friday</span><span>8a – 4p</span></div>
-          <div><span>Sat — Sun</span><span>Closed</span></div>
+          <div><span>Saturday</span><span>9a – 3p</span></div>
+          <div><span>Sunday</span><span>Closed</span></div>
         </div>
       </div>
     </div>
