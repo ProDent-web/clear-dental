@@ -29,3 +29,7 @@ _generate-services.py
 # Python cache (from image-processing scripts)
 __pycache__/
 *.pyc
+
+# Stray raw HEIC source files (converted versions are committed instead)
+*.HEIC
+*.heic
